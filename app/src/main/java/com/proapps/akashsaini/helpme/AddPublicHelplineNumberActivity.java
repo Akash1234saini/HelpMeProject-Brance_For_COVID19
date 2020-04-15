@@ -41,6 +41,7 @@ import java.util.Objects;
 
 public class AddPublicHelplineNumberActivity extends AppCompatActivity {
 
+    // get instance
     private EditText mNameEditText, mMobile1EditText, mMobile2EditText, mStateEditText, mPinEditText, mCityEditText, mAddressLine1EditText, mAddressLine2EditText;
     private static final String TAG = AddPublicHelplineNumberActivity.class.getSimpleName();
 
