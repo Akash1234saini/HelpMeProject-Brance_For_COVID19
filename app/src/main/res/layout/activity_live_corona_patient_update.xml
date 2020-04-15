@@ -26,6 +26,10 @@
             app:elevation="0dp"
             android:gravity="end"
             app:titleMarginStart="16dp"
+            app:subtitle="Last Update: YYYY-MM-DD HH:MM:SS:MLS"
+            app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Caption"
+            app:title="Global Corona Live Report"
+            app:titleTextAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </com.google.android.material.appbar.AppBarLayout>

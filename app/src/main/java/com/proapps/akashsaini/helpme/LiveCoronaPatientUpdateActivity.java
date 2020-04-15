@@ -66,13 +66,14 @@ public class LiveCoronaPatientUpdateActivity extends AppCompatActivity
     private TextView mGlobalDeaths;
     private TextView mGlobalRecovered;
 
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_corona_patient_update);
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         mListView = findViewById(R.id.listView);
         mEmptyStateTextView = findViewById(R.id.empty_state);
         loadingIndicator = findViewById(R.id.progress_bar);
@@ -225,6 +226,23 @@ public class LiveCoronaPatientUpdateActivity extends AppCompatActivity
         mGlobalCases.setText(globalPatientList.get(0).getmCases());
         mGlobalDeaths.setText(globalPatientList.get(0).getmDeaths());
         mGlobalRecovered.setText(globalPatientList.get(0).getmRecovered());
+
+        try {
+            String timeSubStr = "Last Updated: " +
+                    globalPatientList
+                            .get(0)
+                            .getmUrl()
+                            .substring(0, globalPatientList.get(0).getmUrl().indexOf("T")) +
+                    " " +
+                    globalPatientList
+                            .get(0)
+                            .getmUrl()
+                            .substring(globalPatientList.get(0).getmUrl().indexOf("T") + 1, globalPatientList.get(0).getmUrl().length() - 1);
+            toolbar.setSubtitle(timeSubStr);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

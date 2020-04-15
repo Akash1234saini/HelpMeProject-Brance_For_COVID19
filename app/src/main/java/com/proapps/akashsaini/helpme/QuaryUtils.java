@@ -165,11 +165,11 @@ public final class QuaryUtils {
             // which represents a list of features (or earthquakes).
             JSONArray coronaPatientArray = baseJsonResponse.getJSONArray("areas");
 
-            coronaPatients.add(new LiveCoronaPatient(R.drawable.splash_screen_backgroung, "world",
+            coronaPatients.add(new LiveCoronaPatient("0", R.drawable.splash_screen_backgroung, "world",
                     baseJsonResponse.getString("totalConfirmed"),
                     baseJsonResponse.getString("totalDeaths"),
                     baseJsonResponse.getString("totalRecovered"),
-                    "lastUpdated" /* just because it will not assign in list view */));
+                    baseJsonResponse.getString("lastUpdated") /* just because it will not assign in list view */));
 
 //             For each corona patient country in the coronaPatientArray, create an {@link LiveCoronaPatient} object
             for (int i = 0; i < coronaPatientArray.length(); i++) {
@@ -189,7 +189,8 @@ public final class QuaryUtils {
                 String recovered = coronaPatientArray.getJSONObject(i).getString("totalRecovered");
                 if (recovered.equals("null")) recovered = "0";
 
-                coronaPatients.add(new LiveCoronaPatient(R.drawable.splash_screen_backgroung, country, cases, deaths, recovered, ""));
+                int index = i + 1;
+                coronaPatients.add(new LiveCoronaPatient("(" + index + ")", R.drawable.splash_screen_backgroung, country, cases, deaths, recovered, ""));
             }
 
         } catch (JSONException e) {

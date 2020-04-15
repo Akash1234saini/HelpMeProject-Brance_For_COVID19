@@ -8,6 +8,8 @@ public class LiveCoronaPatient {
     private String mCountry;
     private String mCases;
     private String mDeaths;
+    private String mIndex;
+
     /*Comparator for sorting in ascending order the list by Public Number State*/
     public static final Comparator<LiveCoronaPatient> sortByCasesAscending = new Comparator<LiveCoronaPatient>() {
 
@@ -136,16 +138,21 @@ public class LiveCoronaPatient {
     };
     private String mUrl;
 
-    public LiveCoronaPatient(int mFlagImage, String mCountry, String mCases, String mDeaths, String mRecovered, String mUrl) {
+    public LiveCoronaPatient(String mIndex, int mFlagImage, String mCountry, String mCases, String mDeaths, String mRecovered, String mUrl) {
         this.mFlagImage = mFlagImage;
         this.mCountry = mCountry;
         this.mCases = mCases;
         this.mDeaths = mDeaths;
         this.mRecovered = mRecovered;
         this.mUrl = mUrl;
+        this.mIndex = mIndex;
     }
 
     public String getmUrl() {
         return mUrl;
+    }
+
+    public String getmIndex() {
+        return mIndex;
     }
 }

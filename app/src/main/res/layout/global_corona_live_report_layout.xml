@@ -14,28 +14,38 @@
         app:srcCompat="@drawable/splash_screen_backgroung"
         android:scaleType="centerCrop"/>
 
+    <TextView
+        android:id="@+id/list_item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="(1)"
+        android:textSize="12sp" />
+
     <LinearLayout
         android:id="@+id/country_and_cases_layout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_vertical"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="8dp"
-        android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/deaths_and_recovered_layout"
-        android:layout_marginStart="8dp">
+        android:layout_toEndOf="@+id/list_item_number"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/country_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="India"
-            android:singleLine="true"
             android:ellipsize="end"
-            android:textColor="@color/country_label_color"
             android:fontFamily="sans-serif-black"
-            android:textSize="18sp"/>
+            android:singleLine="true"
+            android:text="India"
+            android:textColor="@color/country_label_color"
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -44,21 +54,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
                 android:text="Cases: "
                 android:textColor="@color/casesLabelColor"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-condensed-light"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/cases_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:text="9000"
                 android:textColor="@color/casesColor"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:textStyle="bold"
-                android:textSize="12sp"/>
+                android:textSize="12sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

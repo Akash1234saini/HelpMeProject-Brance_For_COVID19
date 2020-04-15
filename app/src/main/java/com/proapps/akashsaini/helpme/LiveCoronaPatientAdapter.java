@@ -44,6 +44,7 @@ public class LiveCoronaPatientAdapter extends ArrayAdapter<LiveCoronaPatient> {
         TextView cases = rootView.findViewById(R.id.cases_text_view);
         TextView deaths = rootView.findViewById(R.id.deaths_text_view);
         TextView recovered = rootView.findViewById(R.id.recovered_text_view);
+        TextView listItemNum = rootView.findViewById(R.id.list_item_number);
 
         LiveCoronaPatient currentCountry = getItem(position);
 
@@ -56,6 +57,7 @@ public class LiveCoronaPatientAdapter extends ArrayAdapter<LiveCoronaPatient> {
         cases.setText(currentCountry.getmCases());
         deaths.setText(currentCountry.getmDeaths());
         recovered.setText(currentCountry.getmRecovered());
+        listItemNum.setText(currentCountry.getmIndex());
 
         return rootView;
     }
