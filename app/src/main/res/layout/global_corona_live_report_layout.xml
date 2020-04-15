@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/flag_image_view"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         app:srcCompat="@drawable/splash_screen_backgroung"
@@ -22,7 +22,7 @@
         android:gravity="center_vertical"
         android:layout_gravity="center_vertical"
         android:layout_marginEnd="8dp"
-        android:layout_toEndOf="@id/flag_image_view"
+        android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/deaths_and_recovered_layout"
         android:layout_marginStart="8dp">
 

@@ -1,7 +1,16 @@
 package com.proapps.akashsaini.helpme;
 
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
+
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -18,6 +27,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Helper methods related to requesting and receiving earthquake data from USGS.
@@ -158,7 +168,8 @@ public final class QuaryUtils {
             coronaPatients.add(new LiveCoronaPatient(R.drawable.splash_screen_backgroung, "world",
                     baseJsonResponse.getString("totalConfirmed"),
                     baseJsonResponse.getString("totalDeaths"),
-                    baseJsonResponse.getString("totalRecovered")));
+                    baseJsonResponse.getString("totalRecovered"),
+                    "lastUpdated" /* just because it will not assign in list view */));
 
 //             For each corona patient country in the coronaPatientArray, create an {@link LiveCoronaPatient} object
             for (int i = 0; i < coronaPatientArray.length(); i++) {
@@ -168,14 +179,17 @@ public final class QuaryUtils {
 
                 // Extract the value for the key called "displayName"
                 String cases = coronaPatientArray.getJSONObject(i).getString("totalConfirmed");
+                if (cases.equals("null")) cases = "0";
 
                 // Extract the value for the key called "displayName"
                 String deaths = coronaPatientArray.getJSONObject(i).getString("totalDeaths");
+                if (deaths.equals("null")) deaths = "0";
 
                 // Extract the value for the key called "displayName"
                 String recovered = coronaPatientArray.getJSONObject(i).getString("totalRecovered");
+                if (recovered.equals("null")) recovered = "0";
 
-                coronaPatients.add(new LiveCoronaPatient(R.drawable.splash_screen_backgroung, country, cases, deaths, recovered));
+                coronaPatients.add(new LiveCoronaPatient(R.drawable.splash_screen_backgroung, country, cases, deaths, recovered, ""));
             }
 
         } catch (JSONException e) {
@@ -188,5 +202,4 @@ public final class QuaryUtils {
         // Return the list of earthquakes
         return coronaPatients;
     }
-
 }

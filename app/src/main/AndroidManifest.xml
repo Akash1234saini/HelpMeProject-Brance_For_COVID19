@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="HardcodedDebugMode">
+        <activity
+            android:name=".SettingGloabalCasesActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/SettingsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.proapps.akashsaini.helpme.LiveCoronaPatientUpdateActivity" />
+        </activity>
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,8 +35,7 @@
             android:name=".LiveCoronaPatientUpdateActivity"
             android:label="Global Corona Live Report" />
         <activity android:name=".VerificationCodeActivity" />
-        <activity android:name=".LicenseAgreementActivity">
-        </activity>
+        <activity android:name=".LicenseAgreementActivity" />
         <activity
             android:name=".HelpActivity"
             android:label="Help"

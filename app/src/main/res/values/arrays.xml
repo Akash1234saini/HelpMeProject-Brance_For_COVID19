@@ -32,4 +32,28 @@
         <item>@string/settings_government_sort_by_ascending_value</item>
         <item>@string/settings_government_sort_by_descending_value</item>
     </string-array>
+
+    <string-array name="settings_order_by_global_cases_labels">
+        <item>@string/settings_order_by_global_cases_country_label</item>
+        <item>@string/settings_order_by_global_cases_cases_label</item>
+        <item>@string/settings_order_by_global_cases_deaths_label</item>
+        <item>@string/settings_order_by_global_cases_recovered_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_global_cases_values">
+        <item>@string/settings_order_by_global_cases_country_value</item>
+        <item>@string/settings_order_by_global_cases_cases_label</item>
+        <item>@string/settings_order_by_global_cases_deaths_value</item>
+        <item>@string/settings_order_by_global_cases_recovered_value</item>
+    </string-array>
+
+    <string-array name="settings_sort_by_global_cases_labels">
+        <item>@string/settings_sort_by_global_cases_ascending_label</item>
+        <item>@string/settings_sort_by_global_cases_descending_label</item>
+    </string-array>
+
+    <string-array name="settings_sort_by_global_cases_values">
+        <item>@string/settings_sort_by_global_cases_ascending_value</item>
+        <item>@string/settings_sort_by_global_cases_descending_value</item>
+    </string-array>
 </resources>

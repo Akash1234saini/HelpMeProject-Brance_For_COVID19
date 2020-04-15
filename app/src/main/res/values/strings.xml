@@ -65,6 +65,31 @@
     <string name="settings_order_by_address_label">Address</string>
     <string name="settings_order_by_address_value" translatable="false">address</string>
 
+    <!-- global cases actiivty setting -->
+    <string name="settings_order_by_global_cases_key" translatable="false">global_order_by</string>
+    <string name="settings_order_by_global_cases_country_default" translatable="false">@string/settings_order_by_global_cases_country_label</string>
+    <!-- Label for order-by name option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_global_cases_country_label">Country</string>
+    <string name="settings_order_by_global_cases_country_value" translatable="false">country</string>
+    <!-- Label for order-by name option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_global_cases_cases_label">Cases</string>
+    <string name="settings_order_by_global_cases_cases_value" translatable="false">cases</string>
+    <!-- Label for order-by city option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_global_cases_deaths_label">Deaths</string>
+    <string name="settings_order_by_global_cases_deaths_value" translatable="false">deaths</string>
+    <!-- Label for order-by city option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_global_cases_recovered_label">Recovered</string>
+    <string name="settings_order_by_global_cases_recovered_value" translatable="false">recovered</string>
+
+    <string name="settings_sort_by_global_cases_key" translatable="false">global_sort_by</string>
+    <string name="settings_sort_by_global_cases_default" translatable="false">@string/settings_sort_by_ascending_value</string>
+    <!-- Label for order-by ascending option [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_global_cases_ascending_label">Ascending</string>
+    <string name="settings_sort_by_global_cases_ascending_value" translatable="false">ascending</string>
+    <!-- Label for order-by ascending option [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_global_cases_descending_label">Descending</string>
+    <string name="settings_sort_by_global_cases_descending_value" translatable="false">descending</string>
+
     <!-- Strings for Sort-By Preference [CHAR LIMIT=30] -->
     <string name="settings_sort_by_label">Sort By</string>
     <string name="settings_sort_by_key" translatable="false">sort_by</string>

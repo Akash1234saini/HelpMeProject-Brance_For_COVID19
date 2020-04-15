@@ -17,15 +17,21 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LiveCoronaPatientUpdateActivity extends AppCompatActivity
@@ -135,8 +141,6 @@ public class LiveCoronaPatientUpdateActivity extends AppCompatActivity
 
     @Override
     public void onLoadFinished(Loader<List<LiveCoronaPatient>> loader, List<LiveCoronaPatient> data) {
-// Hide loading indicator because the data has been loaded
-        loadingIndicator.setVisibility(View.GONE);
 
         // Set empty state text to display "No earthquakes found."
         mEmptyStateTextView.setText(R.string.no_result_found);
@@ -157,10 +161,63 @@ public class LiveCoronaPatientUpdateActivity extends AppCompatActivity
             // assign values into global text views
             updateUi(globalPatient);
 
+            dataOrdering(data);
+
             // then add all data of list of countries
             mAdapter.addAll(data);
+
+            // Hide loading indicator because the data has been loaded
+            loadingIndicator.setVisibility(View.GONE);
+
             Log.i(TAG, "Size: " + data.size());
         }
+    }
+
+    private void dataOrdering(List<LiveCoronaPatient> data) {
+
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String sortBy = sharedPrefs.getString(
+                getString(R.string.settings_sort_by_global_cases_key),
+                getString(R.string.settings_sort_by_global_cases_default));
+
+        String orderBy = sharedPrefs.getString(
+                getString(R.string.settings_order_by_global_cases_key),
+                getString(R.string.settings_order_by_global_cases_country_default)
+        );
+
+
+        if (sortBy.equals(getString(R.string.settings_sort_by_global_cases_ascending_value))
+                && orderBy.equals(getString(R.string.settings_order_by_global_cases_country_value)))
+            Collections.sort(data, LiveCoronaPatient.sortByCountryAscending);
+
+        else if (sortBy.equals(getString(R.string.settings_sort_by_global_cases_descending_value))
+                && orderBy.equals(getString(R.string.settings_order_by_global_cases_country_value)))
+            Collections.sort(data, LiveCoronaPatient.sortByCountryDescending);
+
+
+        else if (sortBy.equals(getString(R.string.settings_sort_by_global_cases_ascending_value))
+                && orderBy.equals(getString(R.string.settings_order_by_global_cases_cases_value)))
+            Collections.sort(data, LiveCoronaPatient.sortByCasesAscending);
+
+        else if (sortBy.equals(getString(R.string.settings_sort_by_global_cases_descending_value))
+                && orderBy.equals(getString(R.string.settings_order_by_global_cases_cases_value))) {
+            Collections.sort(data, LiveCoronaPatient.sortByCasesDescending);
+        } else if (sortBy.equals(getString(R.string.settings_sort_by_global_cases_ascending_value))
+                && orderBy.equals(getString(R.string.settings_order_by_global_cases_deaths_value)))
+            Collections.sort(data, LiveCoronaPatient.sortByDeathAscending);
+
+        else if (sortBy.equals(getString(R.string.settings_sort_by_global_cases_descending_value))
+                && orderBy.equals(getString(R.string.settings_order_by_global_cases_deaths_value)))
+            Collections.sort(data, LiveCoronaPatient.sortByDeathDescending);
+
+
+        else if (sortBy.equals(getString(R.string.settings_sort_by_global_cases_ascending_value))
+                && orderBy.equals(getString(R.string.settings_order_by_global_cases_recovered_value)))
+            Collections.sort(data, LiveCoronaPatient.sortByRecoveredAscending);
+
+        else if (sortBy.equals(getString(R.string.settings_sort_by_global_cases_descending_value))
+                && orderBy.equals(getString(R.string.settings_order_by_global_cases_recovered_value)))
+            Collections.sort(data, LiveCoronaPatient.sortByRecoveredDescending);
     }
 
     private void updateUi(ArrayList<LiveCoronaPatient> globalPatientList) {
@@ -179,5 +236,42 @@ public class LiveCoronaPatientUpdateActivity extends AppCompatActivity
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
 
+        if (key.equals(getString(R.string.settings_order_by_global_cases_key)) ||
+                key.equals(getString(R.string.settings_sort_by_global_cases_key))) {
+            // Clear the ListView as a new query will be kicked off
+            mAdapter.clear();
+
+            // Hide the empty state text view as the loading indicator will be displayed
+            mEmptyStateTextView.setVisibility(View.GONE);
+
+            // Show the loading indicator while new data is being fetched
+            loadingIndicator.setVisibility(View.VISIBLE);
+
+            // Restart the loader to requery the USGS as the query settings have been updated
+            getLoaderManager().restartLoader(PATIENT_LOADER_ID, null, this);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.livd_corona_patient_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == R.id.action_setting) {
+            startActivity(new Intent(this, SettingGloabalCasesActivity.class));
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }
