@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_order_by_label">च्या आदेशाने</string>
+    <string name="settings_order_by_name_label">नाव</string>
+    <string name="settings_order_by_state_label">राज्य</string>
+    <string name="settings_order_by_city_label">शहर</string>
+    <string name="settings_order_by_address_label">पत्ता</string>
+    <string name="settings_sort_by_label">क्रमवारी लावा</string>
+    <string name="settings_sort_by_ascending_label">चढत्या</string>
+    <string name="settings_sort_by_descending_label">फसव्या</string>
+    <string name="search_hint">सार्वजनिकरित्या कोणत्याही तपशीलांसाठी शोधा</string>
+    <string name="error_list_view">नेटवर्क नाही (कृपया आपले नेटवर्क कनेक्शन तपासा)</string>
+    <string name="empty_list_view">नंबर जोडणारे प्रथम व्हा!</string>
+    <string name="enable_to_upload_data">नेटवर्क नाही! Lease n कृपया आपले इंटरनेट तपासा आणि परत या</string>
+    <string name="connect_net_for_more_result">आपण ऑफलाइन शोधत आहात, कृपया अधिक निकाल मिळविण्यासाठी आपले इंटरनेट कनेक्ट करा</string>
+    <string name="no_result_found">" साठी कोणताही परिणाम आढळला नाही"</string>
+    <string name="action_signout">साइनआउट</string>
+    <string name="action_help">मदत</string>
+    <string name="action_share">सामायिक करा</string>
+    <string name="action_check_for_update">अद्यतन तपासा</string>
+    <string name="action_add_public_number">जोडा</string>
+    <string name="action_delete_public_number">हटवा</string>
+    <string name="action_search">शोध</string>
+    <string name="share">सामायिक करा</string>
+    <string name="setting">सेटिंग</string>
+    <string name="government_header">अंकुर</string>
+    <string name="public_header">सार्वजनिक</string>
+    <string name="add_public_number_label">संख्या जोडा</string>
+    <string name="settings_menu_item">फिल्टर</string>
+    <string name="title_activity_settings">सेटिंग्ज</string>
+     <string name="settings_government_sort_by_label">क्रमवारी लावा</string>
+    <string name="settings_government_sort_by_ascending_label">चढत्या</string>
+    <string name="settings_government_sort_by_descending_label">फसव्या</string>
+    <string name="action_language">इंग्रजी</string>
+    <string name="term_and_service">"सेवा आणि गोपनीयता अटी "</string>
+    <string name="please_read_TnC_PP">"आम्हाला या विषयाचे स्वरूप आणि संवेदनशीलता समजली आहे आणि आपल्या डेटामध्ये कोणतीही तडजोड होणार नाही हे सुनिश्चित करण्यासाठी कठोर उपाययोजना केली आहेत. "</string>
+    <string name="phone_call">"फोन कॉल "</string>
+    <string name="describe_phone_call">"आपण कोणत्याही नंबरवर कॉल करण्यासाठी या परवानगीस अनुमती दिली पाहिजे. "</string>
+    <string name="internet">इंटरनेट</string>
+    <string name="describe_internet">"नेटमधून घेतलेल्या काही माहितीसाठी परवानगी आवश्यक आहे. "</string>
+    <string name="link_of_TnC_and_PP">"आपणास सुरक्षित भारतासाठी हातभार लावायचा असेल तर कृपया खालील बटणावर क्लिक करुन तुम्ही मुदत व शर्तीची गोपनीयता व गोपनीयता धोरण स्वीकारा. "</string>
+    <string name="agree_button_text">सहमत</string>
+
+    <!-- Help activity list item strings -->
+    <string name="term_condition_label">अटी व शर्ती</string>
+    <string name="privacy_policy_label">गोपनीयता धोरण</string>
+    <string name="how_to_use_app_label">अ‍ॅप कसा वापरायचा?</string>
+    <string name="contact_us_label">आमच्याशी संपर्क साधा</string>
+    <string name="about_us_label">अ‍ॅप बद्दल</string>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_order_by_label">द्वारा आदेश</string>
+    <string name="settings_order_by_name_label">नाम</string>
+    <string name="settings_order_by_state_label">राज्य</string>
+    <string name="settings_order_by_city_label">शहर</string>
+    <string name="settings_order_by_address_label">पता</string>
+    <string name="settings_sort_by_label">इसके अनुसार क्रमबद्ध करें</string>
+    <string name="settings_sort_by_ascending_label">आरोही</string>
+    <string name="settings_sort_by_descending_label">उतरते</string>
+    <string name="search_hint">किसी भी विवरण के लिए खोजें …</string>
+    <string name="error_list_view">कोई नेटवर्क नहीं (कृपया अपना नेटवर्क कनेक्शन जांचें)</string>
+    <string name="empty_list_view">नंबर जोड़ने वाले पहले व्यक्ति बनें!</string>
+    <string name="enable_to_upload_data">कोई नेटवर्क नहीं! \\n कृपया अपना इंटरनेट जांचें और फिर से वापस जाएं</string>
+    <string name="connect_net_for_more_result">आप ऑफ़लाइन खोज रहे हैं, कृपया अधिक परिणाम प्राप्त करने के लिए अपने इंटरनेट से कनेक्ट करें</string>
+    <string name="no_result_found">के लिए कोई परिणाम नहीं मिला</string>
+    <string name="action_signout">प्रस्थान करें</string>
+    <string name="action_help">मदद</string>
+    <string name="action_share">शेयर</string>
+    <string name="action_check_for_update">अद्यतन की जाँच करें</string>
+    <string name="action_add_public_number">जोड़ना</string>
+    <string name="action_delete_public_number">हटाना</string>
+    <string name="action_search">खोज</string>
+    <string name="share">शेयर</string>
+    <string name="setting">स्थापना</string>
+    <string name="government_header">सरकार</string>
+    <string name="public_header">जनता</string>
+    <string name="add_public_number_label">अंक जोड़ो</string>
+    <string name="settings_menu_item">फिल्टर</string>
+    <string name="title_activity_settings">समायोजन</string>
+    <string name="settings_government_sort_by_label">इसके अनुसार क्रमबद्ध करें</string>
+    <string name="settings_government_sort_by_ascending_label">आरोही</string>
+    <string name="settings_government_sort_by_descending_label">उतरते</string>
+    <string name="action_language">भाषा</string>
+    <string name="term_and_service">"सेवा और गोपनीयता की अवधि "</string>
+    <string name="please_read_TnC_PP">"हम इस विषय की प्रकृति और संवेदनशीलता को समझते हैं और यह सुनिश्चित करने के लिए मजबूत उपाय किए हैं कि आपका डेटा समझौता न हो। "</string>
+    <string name="phone_call">"फ़ोन कॉल "</string>
+    <string name="describe_phone_call">"आपको यह अनुमति किसी भी नंबर पर कॉल करने की अनुमति देनी चाहिए। "</string>
+    <string name="internet">इंटरनेट</string>
+    <string name="describe_internet">"नेट से ली गई कुछ सूचनाओं के लिए अनुमति आवश्यक है। "</string>
+    <string name="link_of_TnC_and_PP">"यदि आप सुरक्षित भारत में योगदान देना चाहते हैं तो कृपया नीचे दिए गए बटन पर क्लिक करके टर्म एंड कंडीशन और गोपनीयता नीति की अपनी स्वीकृति का संकेत दें। "</string>
+    <string name="agree_button_text">"इस बात से सहमत "</string>
+    <!-- Help activity list item strings -->
+    <string name="term_condition_label">निबंधन और शर्तें</string>
+    <string name="privacy_policy_label">गोपनीयता नीति</string>
+    <string name="how_to_use_app_label">कैसे करें ऐप का इस्तेमाल?</string>
+    <string name="contact_us_label">संपर्क करें</string>
+    <string name="about_us_label">ऐप के बारे में</string>
+</resources>

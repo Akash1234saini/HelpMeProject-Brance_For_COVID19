@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name" translatable="false">Corona HelpLines</string>
+
+    <string name="action_signout">Signout</string>
+    <string name="action_help">Help</string>
+    <string name="action_language">Language</string>
+    <string name="action_share">Share</string>
+    <string name="action_check_for_update">Check Update</string>
+    <string name="action_add_public_number">Add</string>
+    <string name="action_delete_public_number">Delete</string>
+    <string name="calling_intent_start" translatable="false">Calling</string>
+    <string name="action_search">Search</string>
+    <string name="share">Share</string>
+
+    <!-- SettingActivity Label -->
+    <string name="setting">Setting</string>
+
+    <!-- SettingActivity Label -->
+    <string name="government_header">Government</string>
+    <string name="public_header">Public</string>
+
+    <!-- Text for display in item layout of list view -->
+    <string name="state" translatable="false">Utter Pradesh</string>
+    <string name="number" translatable="false">+918298462786</string>
+
+    <string name="add_public_number_label">Add Number</string>
+
+    <string name="settings_menu_item">Filter</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Permission disgraced toast message -->
+    <!--    <string name="agreement_text">Allow to call</string>-->
+    <!--    <string name="permissions_dissgranted">Allow permissions to use application</string>-->
+
+    <!-- Preference Titles -->
+    <string name="messages_header" translatable="false">Messages</string>
+    <string name="sync_header" translatable="false">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title" translatable="false">Your signature</string>
+    <string name="reply_title" translatable="false">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="attachment_title" translatable="false">Download incoming attachments</string>
+    <string name="attachment_summary_on" translatable="false">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off" translatable="false">Only download attachments when manually requested</string>
+
+
+    <!-- Strings for Order-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_name_label</string>
+    <!-- Label for order-by name option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_name_label">Name</string>
+    <string name="settings_order_by_name_value" translatable="false">name</string>
+    <!-- Label for order-by name option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_state_label">State</string>
+    <string name="settings_order_by_state_value" translatable="false">state</string>
+    <!-- Label for order-by city option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_city_label">City</string>
+    <string name="settings_order_by_city_value" translatable="false">city</string>
+    <!-- Label for order-by address option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_address_label">Address</string>
+    <string name="settings_order_by_address_value" translatable="false">address</string>
+
+    <!-- Strings for Sort-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_sort_by_label">Sort By</string>
+    <string name="settings_sort_by_key" translatable="false">sort_by</string>
+    <string name="settings_sort_by_default" translatable="false">@string/settings_sort_by_ascending_value</string>
+    <!-- Label for order-by ascending option [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_ascending_label">Ascending</string>
+    <string name="settings_sort_by_ascending_value" translatable="false">ascending</string>
+    <!-- Label for order-by ascending option [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_descending_label">Descending</string>
+    <string name="settings_sort_by_descending_value" translatable="false">descending</string>
+
+    <!-- Strings for Sort-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_government_sort_by_label">Sort By</string>
+    <string name="settings_government_sort_by_key" translatable="false">gov_by</string>
+    <string name="settings_government_sort_by_default" translatable="false">@string/settings_government_sort_by_ascending_value</string>
+    <!-- Label for order-by ascending option [CHAR LIMIT=20] -->
+    <string name="settings_government_sort_by_ascending_label">Ascending</string>
+    <string name="settings_government_sort_by_ascending_value" translatable="false">ascending</string>
+    <!-- Label for order-by ascending option [CHAR LIMIT=20] -->
+    <string name="settings_government_sort_by_descending_label">Descending</string>
+    <string name="settings_government_sort_by_descending_value" translatable="false">descending</string>
+
+    <!-- Search view strings -->
+    <string name="search_hint">Search for any detail…</string>
+
+    <!-- error or empty text view string -->
+    <string name="error_list_view">No Network (Please check your network connection)</string>
+    <string name="empty_list_view">Be the first to add number!</string>
+
+    <!-- toast msg to indicates that user can't upload data to database text view string -->
+    <string name="enable_to_upload_data">No Network!\nplease check your internet and back again</string>
+
+    <!-- no network text for search activity string -->
+    <string name="connect_net_for_more_result">You\'re searching offline, please connect your internet to get more result</string>
+    <!-- no result text for search activity string -->
+    <string name="no_result_found">No result found for</string>
+
+    <!-- Agreement App Permission strings -->
+    <string name="term_and_service">Term of Service &amp; Privacy</string>
+    <string name="please_read_TnC_PP">We understand the nature and sensitivity of this topic and have taken strong measures to ensure that your data is not compromised.</string>
+    <string name="phone_call">Phone Call</string>
+    <string name="describe_phone_call">You must allow this permission to make call to any number.</string>
+    <string name="internet">Internet</string>
+    <string name="describe_internet">Permission is required for some information taken from the net.</string>
+    <string name="link_of_TnC_and_PP">If you would like to contribute to s safe India please indicate your acceptance of the Term and Condition and the Privacy Policy by clicking on the button below.</string>
+    <string name="agree_button_text">Agree</string>
+
+    <!-- Help activity list item strings -->
+    <string name="term_condition_label">Term &amp; Conditions</string>
+    <string name="privacy_policy_label">Privacy Policy</string>
+    <string name="how_to_use_app_label">How to use app?</string>
+    <string name="contact_us_label">Contact Us</string>
+    <string name="about_us_label">About Us</string>
+
+    <!-- Verification code activity strings -->
+    <string name="code_send_label">We send you 6 digit code</string>
+    <string name="continue_button">Continue</string>
+    <string name="resend_button">Resend</string>
+
+    <!-- Sign in errors strings -->
+    <string name="not_sign_in_yet">You have not signin yet</string>
+    <string name="facing_error">Facing some error please try again later!</string>
+
+    <!-- Dialog title and messages strings -->
+    <string name="warning">Warning</string>
+    <string name="are_you_sure">Are you sure you want to call on this number?</string>
+    <string name="don_t_show_text">Don\'t show again</string>
+    <string name="update_dialog_title">Update Available</string>
+    <string name="update_dialog_message">You want to update latest version of an appliation?</string>
+
+    <!-- Bottom navigation view tabs strings -->
+    <string name="action_home">Home</string>
+    <string name="action_live">Live</string>
+
+    <!-- Live total COVID19 report strings -->
+    <string name="total_cases_label">Total Cases</string>
+    <string name="total_cases_placeholder">0</string>
+    <string name="total_deaths_label">Total Deaths</string>
+    <string name="total_deaths_placeholder">0</string>
+    <string name="total_recovered_label">Total Recovered</string>
+    <string name="total_recovered_placeholder">0</string>
+    <string name="overview_label">Overview</string>
+    <string name="name_edit_text_hint">*Name</string>
+    <string name="mobile_number_1_edit_text_hint">*Mobile Number 1</string>
+    <string name="mobile_number_2_edit_text_hint">Mobile Number 2</string>
+    <string name="address_label">Address</string>
+    <string name="state_edit_text_hint">*State</string>
+    <string name="pin_edit_text_hint">Pin</string>
+    <string name="city_edit_text_hint">*City</string>
+    <string name="address_line_1_edit_text_hint">*Address Line 1</string>
+    <string name="address_line_2_edit_text_hint">Address Line 2</string>
+    <string name="introducing">Introducing</string>
+    <string name="company_name">by CodeX Editors</string>
+    <string name="app_splash_screen_name">COVID19 HelpLines</string>
+    <string name="corona_live_update">Corona Live Update</string>
+
+    <!-- Sign in errors strings -->
+
+</resources>

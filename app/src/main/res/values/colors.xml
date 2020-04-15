@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff0000</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">#9C27B0</color>
+
+    <drawable name="selectedColor">#e6e600</drawable>
+
+    <!-- colors for text display in activity layout -->
+    <color name="textState">#2B3D4D</color>
+    <color name="textNumber">#B4BAC0</color>
+
+
+    <color name="AddPublicNumberColorPrimary">#4E4C4C</color>
+    <color name="AddPublicNumberColorPrimaryDark">#313131</color>
+
+    <!-- colors for text display in activity layout -->
+    <color name="colorUserName">#2B3D4D</color>
+    <color name="colorUserDetailKey">#B4BAC0</color>
+    <color name="colorUserDetailValue">#6D6D6D</color>
+    <color name="colorUserNumber">#B9BEC2</color>
+
+    <color name="searchColorPrimary">#F5F5F5</color>
+    <color name="searchColorPrimaryDark">#000000</color>
+    <color name="searchColorAccent">#535353</color>
+    <color name="searchHint">#A2A0A0</color>
+
+    <color name="aboutAppColorPrimary">#4E4C4C</color>
+    <color name="aboutAppColorPrimaryDark">#313131</color>
+
+    <!-- back color of term and services-->
+    <color name="term_and_service_background">@color/colorAccent</color>
+
+    <color name="permissions_head_color">#3D3D3D</color>
+    <color name="permissions_description_color">#4C4B4B</color>
+
+    <!-- bottom navigation colors-->
+    <color name="colorNavigationBackground">#FFFFFF</color>
+    <color name="colorNavigationItemSelected">@color/colorAccent</color>
+    <color name="colorNavigationItemDeselected">#8F8F8F</color>
+
+    <!-- Corona virus cases details activity colors -->
+    <color name="globalCasesLabelColor">#A6A9AC</color>
+    <color name="globalCasesColor">#343434</color>
+    <color name="globalDeathsColor">#F44336</color>
+    <color name="globalRecoveredColor">#47AE4B</color>
+
+    <!-- global corona live report layout colors -->
+    <color name="country_label_color">#828282</color>
+    <color name="casesLabelColor">@color/globalCasesLabelColor</color>
+    <color name="casesColor">#939496</color>
+    <color name="deathsColor">@color/globalDeathsColor</color>
+    <color name="recoveredColor">@color/globalRecoveredColor</color>
+</resources>

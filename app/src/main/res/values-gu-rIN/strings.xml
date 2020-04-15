@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_order_by_label">દ્વારા ઓર્ડર</string>
+    <string name="settings_order_by_name_label">નામ</string>
+    <string name="settings_order_by_state_label">રાજ્ય</string>
+    <string name="settings_order_by_city_label">શહેર</string>
+    <string name="settings_order_by_address_label">સરનામું</string>
+    <string name="settings_sort_by_label">દ્વારા સ sortર્ટ</string>
+    <string name="settings_sort_by_ascending_label">ચડતા</string>
+    <string name="settings_sort_by_descending_label">ઉતરતા</string>
+    <string name="search_hint">જાહેરમાં કોઈપણ વિગતો માટે શોધ કરો</string>
+    <string name="title_activity_settings">સેટિંગ્સ</string>
+    <string name="settings_menu_item">ફિલ્ટર</string>
+    <string name="add_public_number_label">નંબર ઉમેરો</string>
+    <string name="public_header">જાહેર</string>
+    <string name="government_header">અંકુર</string>
+    <string name="setting">સેટિંગ</string>
+    <string name="share">શેર કરો</string>
+    <string name="action_search">શોધ</string>
+    <string name="action_delete_public_number">કા .ી નાખો</string>
+    <string name="action_add_public_number">ઉમેરો</string>
+    <string name="action_check_for_update">સુધારો તપાસો</string>
+    <string name="action_share">શેર કરો</string>
+    <string name="action_help">મદદ</string>
+    <string name="action_signout">સાઇનઆઉટ</string>
+    <string name="no_result_found">માટે કોઈ પરિણામ મળ્યું નથી</string>
+    <string name="connect_net_for_more_result">તમે offlineફલાઇન શોધી રહ્યાં છો, વધુ પરિણામ મેળવવા માટે કૃપા કરીને તમારું ઇન્ટરનેટ કનેક્ટ કરો</string>
+    <string name="enable_to_upload_data">નેટવર્ક નથી! Lease n કૃપા કરીને તમારું ઇન્ટરનેટ તપાસો અને ફરી પાછા આવો</string>
+    <string name="empty_list_view">નંબર ઉમેરનારા પ્રથમ બનો!</string>
+    <string name="error_list_view">નેટવર્ક નથી (કૃપા કરીને તમારું નેટવર્ક કનેક્શન તપાસો)</string>
+    <string name="settings_government_sort_by_ascending_label">ચડતા</string>
+    <string name="settings_government_sort_by_descending_label">ઉતરતા</string>
+    <string name="settings_government_sort_by_label">દ્વારા સ sortર્ટ</string>
+    <string name="action_language">ભાષા</string>
+    <string name="please_read_TnC_PP">"અમે આ વિષયની પ્રકૃતિ અને સંવેદનશીલતાને સમજીએ છીએ અને તમારા ડેટા સાથે ચેડા ન થાય તે માટે કડક પગલા લીધા છે. "</string>
+    <string name="term_and_service">"સેવા અને ગોપનીયતાની મુદત "</string>
+    <string name="phone_call">"ફોન કૉલ "</string>
+    <string name="describe_phone_call">"તમારે કોઈપણ નંબર પર ક callલ કરવા માટે આ પરવાનગીની મંજૂરી આપવી આવશ્યક છે. "</string>
+    <string name="internet">ઇન્ટરનેટ</string>
+    <string name="describe_internet">"નેટમાંથી લેવામાં આવેલી કેટલીક માહિતી માટે પરવાનગી જરૂરી છે. "</string>
+    <string name="link_of_TnC_and_PP">"જો તમે સુરક્ષિત ભારત માટે ફાળો આપવા માંગતા હોવ તો કૃપા કરી નીચે આપેલા બટન પર ક્લિક કરીને ટર્મ એન્ડ શરત અને ગોપનીયતા નીતિની તમારી સ્વીકૃતિ સૂચવો. "</string>
+    <string name="agree_button_text">સંમત</string>
+    <!-- Help activity list item strings -->
+    <string name="term_condition_label">મુદત અને શરતો</string>
+    <string name="privacy_policy_label">ગોપનીયતા નીતિ </string>
+    <string name="how_to_use_app_label">એપ્લિકેશનનો ઉપયોગ કેવી રીતે કરવો?</string>
+    <string name="contact_us_label">અમારો સંપર્ક કરો</string>
+    <string name="about_us_label">અમારા વિશે</string>
+</resources>

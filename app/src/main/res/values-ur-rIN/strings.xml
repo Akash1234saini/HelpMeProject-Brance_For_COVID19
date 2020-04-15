@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_signout">"باہر جائیں "</string>
+    <string name="action_help">مدد</string>
+    <string name="action_language">زبان</string>
+    <string name="action_share">بانٹیں</string>
+    <string name="action_check_for_update">"اپ ڈیٹ چیک کریں "</string>
+    <string name="action_add_public_number">"شامل کریں "</string>
+    <string name="action_delete_public_number">"حذف کریں "</string>
+    <string name="action_search">"تلاش کریں "</string>
+    <string name="share">بانٹیں</string>
+    <string name="setting">ترتیب</string>
+    <string name="government_header">حکومت</string>
+    <string name="public_header">عوام</string>
+    <string name="add_public_number_label">"نمبر شامل کریں "</string>
+    <string name="settings_menu_item">فلٹر</string>
+    <string name="title_activity_settings">ترتیبات</string>
+    <string name="settings_order_by_label">"آرڈر بذریعہ "</string>
+    <string name="settings_order_by_name_label">نام</string>
+    <string name="settings_order_by_state_label">حالت</string>
+    <string name="settings_order_by_city_label">شہر</string>
+    <string name="settings_order_by_address_label">پتہ</string>
+    <string name="settings_sort_by_label">"بہ ترتیب "</string>
+    <string name="settings_sort_by_ascending_label">"چڑھنے "</string>
+    <string name="settings_sort_by_descending_label">نزول</string>
+    <string name="settings_government_sort_by_label">"بہ ترتیب "</string>
+    <string name="settings_government_sort_by_ascending_label">"چڑھنے "</string>
+    <string name="settings_government_sort_by_descending_label">"نزول "</string>
+    <string name="search_hint">"عوام میں کسی بھی تفصیلات کی تلاش کریں "</string>
+    <string name="error_list_view">"کوئی نیٹ ورک نہیں (براہ کرم اپنا نیٹ ورک کنکشن چیک کریں) "</string>
+    <string name="enable_to_upload_data">"کوئی نیٹ ورک نہیں! براہ کرم اپنا انٹرنیٹ چیک کریں اور دوبارہ واپس جائیں "</string>
+    <string name="empty_list_view">"نمبر شامل کرنے والے پہلے شخص بنیں! "</string>
+    <string name="connect_net_for_more_result">"آپ آف لائن تلاش کررہے ہیں ، مزید نتیجہ حاصل کرنے کے ل please براہ کرم اپنے انٹرنیٹ سے رابطہ کریں   "</string>
+    <string name="no_result_found">"کے لئے کوئی نتیجہ نہیں ملا "</string>
+    <string name="term_and_service">"خدمت اور رازداری کی اصطلاح "</string>
+    <string name="please_read_TnC_PP">"ہم اس موضوع کی نوعیت اور حساسیت کو سمجھتے ہیں اور یہ یقینی بنانے کے لئے سخت اقدامات کیے ہیں کہ آپ کے ڈیٹا سے سمجھوتہ نہیں کیا گیا ہے۔ "</string>
+    <string name="phone_call">"فون کال "</string>
+    <string name="describe_phone_call">"آپ کو کسی بھی نمبر پر کال کرنے کے لئے اس اجازت کی اجازت دینی ہوگی۔ "</string>
+    <string name="internet">انٹرنیٹ</string>
+    <string name="describe_internet">"نیٹ سے لی گئی کچھ معلومات کے ل Per اجازت ضروری ہے۔ "</string>
+    <string name="link_of_TnC_and_PP">"اگر آپ محفوظ ہندوستان میں اپنا حصہ ڈالنا چاہتے ہیں تو براہ کرم ذیل کے بٹن پر کلیک کرکے ٹرم اینڈ کنڈیشن اور رازداری کی پالیسی کی اپنی قبولیت کی نشاندہی کریں۔ "</string>
+    <string name="agree_button_text">"متفق ہوں "</string>
+
+    <!-- Help activity list item strings -->
+    <string name="term_condition_label">اصطلاحات اور ضوابط</string>
+    <string name="privacy_policy_label">رازداری کی پالیسی</string>
+    <string name="how_to_use_app_label">ایپ کو کس طرح استعمال کریں؟</string>
+    <string name="contact_us_label">ہم سے رابطہ کریں</string>
+    <string name="about_us_label">ایپ کے بارے میں</string>
+</resources>

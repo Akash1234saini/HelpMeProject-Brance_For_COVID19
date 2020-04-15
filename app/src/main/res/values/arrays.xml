@@ -1,0 +1,35 @@
+<resources>
+    <string-array name="settings_order_by_labels">
+        <item>@string/settings_order_by_name_label</item>
+        <item>@string/settings_order_by_state_label</item>
+        <item>@string/settings_order_by_city_label</item>
+        <item>@string/settings_order_by_address_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values">
+        <item>@string/settings_order_by_name_value</item>
+        <item>@string/settings_order_by_state_value</item>
+        <item>@string/settings_order_by_city_value</item>
+        <item>@string/settings_order_by_address_value</item>
+    </string-array>
+
+    <string-array name="settings_sort_by_labels">
+        <item>@string/settings_sort_by_ascending_label</item>
+        <item>@string/settings_sort_by_descending_label</item>
+    </string-array>
+
+    <string-array name="settings_sort_by_values">
+        <item>@string/settings_sort_by_ascending_value</item>
+        <item>@string/settings_sort_by_descending_value</item>
+    </string-array>
+
+    <string-array name="settings_government_sort_by_labels">
+        <item>@string/settings_government_sort_by_ascending_label</item>
+        <item>@string/settings_government_sort_by_descending_label</item>
+    </string-array>
+
+    <string-array name="settings_government_sort_by_values">
+        <item>@string/settings_government_sort_by_ascending_value</item>
+        <item>@string/settings_government_sort_by_descending_value</item>
+    </string-array>
+</resources>

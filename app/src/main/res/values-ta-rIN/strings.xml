@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_signout"> வெளியேறு </string>
+        
+    <string name="action_help">உதவி</string>
+        
+    <string name="action_language"> மொழி </string>
+        
+    <string name="action_share"> பகிர் </string>
+        
+    <string name="action_check_for_update"> புதுப்பிப்பை சரிபார்க்கவும் </string>
+        
+    <string name="action_add_public_number"> சேர் </string>
+        
+    <string name="action_delete_public_number"> நீக்கு </string>
+        
+    <string name="action_search"> தேடல் </string>
+        
+    <string name="share"> பகிர் </string>
+
+    <string name="setting"> அமைத்தல் </string>
+
+        
+    <string name="government_header"> அரசு </string>
+        
+    <string name="public_header"> பொது </string><![CDATA[
+
+        
+        
+
+
+        
+    ]]>
+    <string name="add_public_number_label"> எண்ணைச் சேர் </string>
+
+        
+    <string name="settings_menu_item"> வடிகட்டி </string>
+        
+    <string name="title_activity_settings"> அமைப்புகள் </string>
+    <string name="settings_order_by_label"> மூலம் ஆர்டர் </string>
+    <string name="settings_order_by_name_label"> பெயர் </string><string name="settings_order_by_state_label"> நிலை </string>
+    <string name="settings_order_by_city_label"> நகரம் </string>
+    <string name="settings_order_by_address_label"> முகவரி </string>
+    <string name="settings_sort_by_label"> மூலம் வரிசைப்படுத்து </string>
+    <string name="settings_sort_by_ascending_label"> ஏறுதல் </string>
+    <string name="settings_sort_by_descending_label"> இறங்கு </string><string name="settings_government_sort_by_label"> மூலம் வரிசைப்படுத்து </string>
+    <string name="settings_government_sort_by_ascending_label"> ஏறுதல் </string>
+    <string name="settings_government_sort_by_descending_label"> இறங்கு </string>
+    <string name="search_hint"> எந்த விவரத்தையும் தேடுங்கள்… </string>
+
+        
+    <string name="error_list_view"> நெட்வொர்க் இல்லை (தயவுசெய்து உங்கள் பிணைய இணைப்பைச் சரிபார்க்கவும்) </string>
+        
+    <string name="empty_list_view"> எண்ணைச் சேர்த்த முதல் நபராக இருங்கள்! </string>
+
+    <string name="enable_to_upload_data"> நெட்வொர்க் இல்லை! your n உங்கள் இணையத்தை சரிபார்த்து மீண்டும் மீண்டும் </string>
+
+    <string name="connect_net_for_more_result"> நீங்கள் ஆஃப்லைனில் தேடுகிறீர்கள், கூடுதல் முடிவைப் பெற உங்கள் இணையத்தை இணைக்கவும் </string>
+        
+    <string name="no_result_found"> க்கு எந்த முடிவும் கிடைக்கவில்லை​​</string>
+        
+    <string name="term_and_service"> சேவை காலம் மற்றும் தனியுரிமை </string>
+        
+    <string name="please_read_TnC_PP"> இந்த தலைப்பின் தன்மை மற்றும் உணர்திறன் ஆகியவற்றை நாங்கள் புரிந்துகொள்கிறோம், மேலும் உங்கள் தரவு சமரசம் செய்யப்படாமல் இருக்க வலுவான நடவடிக்கைகளை எடுத்துள்ளோம். </string>
+        
+    <string name="phone_call"> தொலைபேசி அழைப்பு </string>
+        
+    <string name="describe_phone_call"> எந்த எண்ணையும் அழைக்க இந்த அனுமதியை நீங்கள் அனுமதிக்க வேண்டும். </string>
+        
+    <string name="internet"> இணையம் </string>
+        
+    <string name="describe_internet"> வலையிலிருந்து எடுக்கப்பட்ட சில தகவல்களுக்கு அனுமதி தேவை. </string>
+        
+    <string name="link_of_TnC_and_PP"> பாதுகாப்பான இந்தியாவுக்கு நீங்கள் பங்களிக்க விரும்பினால், கீழேயுள்ள பொத்தானைக் கிளிக் செய்வதன் மூலம்
+        நீங்கள் கால மற்றும் நிபந்தனை மற்றும் தனியுரிமைக் கொள்கையை ஏற்றுக்கொள்வதைக் குறிக்கவும். </string>
+        
+    <string name="agree_button_text">ஒப்புக்கொள்கிறேன்</string>
+
+    <!-- Help activity list item strings -->
+    <string name="term_condition_label">கால மற்றும் நிபந்தனைகள்</string>
+    <string name="privacy_policy_label">தனியுரிமைக் கொள்கை</string>
+    <string name="how_to_use_app_label">பயன்பாட்டை எவ்வாறு பயன்படுத்துவது?</string>
+    <string name="contact_us_label">எங்களை தொடர்பு கொள்ள</string>
+    <string name="about_us_label">பயன்பாட்டைப் பற்றி</string>
+</resources>

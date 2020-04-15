@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="selectable_languages">
+        <item>English</item>
+        <item>हिन्दी</item>
+        <item>પાસ</item>    <!-- gujraati -->
+        <item>मराठी</item>   <!-- marathi -->
+        <item>اردو</item>    <!-- urdu -->
+        <item>മലയാളം</item>  <!-- malayalam -->
+        <item>தமிழ்</item>   <!-- tamil -->
+        <item>ਪੰਜਾਬੀ</item>  <!-- punjabi -->
+        <item>বাংলা</item>   <!-- bengali -->
+    </string-array>
+
+</resources>

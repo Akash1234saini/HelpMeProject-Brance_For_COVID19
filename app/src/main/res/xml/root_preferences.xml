@@ -1,0 +1,50 @@
+<!--
+  ~ Copyright 2018 The app Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/public_header"
+        android:title="@string/public_header">
+
+        <ListPreference
+            android:defaultValue="@string/settings_order_by_default"
+            android:entries="@array/settings_order_by_labels"
+            android:entryValues="@array/settings_order_by_values"
+            android:key="@string/settings_order_by_key"
+            android:title="@string/settings_order_by_label" />
+
+        <ListPreference
+            android:defaultValue="@string/settings_sort_by_default"
+            android:entries="@array/settings_sort_by_labels"
+            android:entryValues="@array/settings_sort_by_values"
+            android:key="@string/settings_sort_by_key"
+            android:title="@string/settings_sort_by_label" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/government_header"
+        android:title="@string/government_header">
+
+        <ListPreference
+            android:defaultValue="@string/settings_government_sort_by_default"
+            android:entries="@array/settings_government_sort_by_labels"
+            android:entryValues="@array/settings_government_sort_by_values"
+            android:key="@string/settings_government_sort_by_key"
+            android:title="@string/settings_government_sort_by_label" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

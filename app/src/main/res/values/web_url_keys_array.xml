@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="url_keys">
+        <item>termandconditions</item>
+        <item>privacypolicy</item>
+        <item>howtouseapp</item>
+        <item>contactus</item>
+        <item>aboutapp</item>
+    </string-array>
+
+</resources>

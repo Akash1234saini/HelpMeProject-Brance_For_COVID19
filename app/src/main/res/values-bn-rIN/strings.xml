@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_signout">"জন্য কোন ফলাফল পাওয়া যায় নি "</string>
+    <string name="action_help">"সাইন আউট "</string>
+    <string name="action_language">ভাষা</string>
+    <string name="action_share">ভাগ</string>
+    <string name="action_check_for_update">"আপডেট চেক কর "</string>
+    <string name="action_add_public_number">যোগ</string>
+    <string name="action_delete_public_number">"মুছে ফেলা "</string>
+    <string name="action_search">অনুসন্ধান</string>
+    <string name="share">ভাগ</string>
+    <string name="setting">স্থাপন</string>
+    <string name="government_header">সরকার</string>
+    <string name="public_header">প্রকাশ্য</string>
+    <string name="add_public_number_label">"সংখা যোগ কর "</string>
+    <string name="settings_menu_item">ছাঁকনি</string>
+    <string name="title_activity_settings">সেটিংস</string>
+    <string name="settings_order_by_label">"অর্ডার দ্বারা "</string>
+    <string name="settings_order_by_name_label">নাম</string>
+    <string name="settings_order_by_state_label">অবস্থা</string>
+    <string name="settings_order_by_city_label">শহর</string>
+    <string name="settings_order_by_address_label">ঠিকানা</string>
+    <string name="settings_sort_by_label">ক্রমানুসার</string>
+    <string name="settings_sort_by_ascending_label">ঊর্ধ্বগামী</string>
+    <string name="settings_sort_by_descending_label">সাজানো</string>
+    <string name="settings_government_sort_by_label">ক্রমানুসার</string>
+    <string name="settings_government_sort_by_ascending_label">ঊর্ধ্বগামী</string>
+    <string name="settings_government_sort_by_descending_label">সাজানো</string>
+    <string name="search_hint">"জনসাধারণের যে কোনও বিবরণ সন্ধান করুন "</string>
+    <string name="error_list_view">"কোনও নেটওয়ার্ক নেই (দয়া করে আপনার নেটওয়ার্ক সংযোগটি পরীক্ষা করুন) "</string>
+    <string name="empty_list_view">"নম্বর যুক্ত প্রথম হন! "</string>
+    <string name="enable_to_upload_data">"কোনও নেটওয়ার্ক নেই (দয়া করে আপনার নেটওয়ার্ক সংযোগটি পরীক্ষা করুন) "</string>
+    <string name="connect_net_for_more_result">"আপনি অফলাইনে অনুসন্ধান করছেন, আরও ফলাফল পেতে দয়া করে আপনার ইন্টারনেটকে সংযুক্ত করুন "</string>
+    <string name="no_result_found">"জন্য কোন ফলাফল পাওয়া যায় নি "</string>
+    <string name="term_and_service">"পরিষেবার শর্তাদি এবং গোপনীয়তা "</string>
+    <string name="please_read_TnC_PP">"আমরা এই বিষয়ের প্রকৃতি এবং সংবেদনশীলতা বুঝতে পারি এবং আপনার ডেটা আপোস না হয় তা নিশ্চিত করার জন্য কঠোর ব্যবস্থা গ্রহণ করেছি। "</string>
+    <string name="phone_call">"ফোন কল "</string>
+    <string name="describe_phone_call">"আপনার অবশ্যই এই অনুমতিটি যে কোনও নম্বরে কল করার অনুমতি দিতে হবে। "</string>
+    <string name="internet">ইন্টারনেটের</string>
+    <string name="describe_internet">"নেট থেকে নেওয়া কিছু তথ্যের জন্য অনুমতি প্রয়োজন। "</string>
+    <string name="link_of_TnC_and_PP">"আপনি যদি নিরাপদ ভারতে অবদান রাখতে চান তবে নীচের বোতামটিতে ক্লিক করে আপনার শর্ত ও শর্ত এবং গোপনীয়তা নীতি সম্পর্কে আপনার স্বীকৃতি নির্দেশ করুন। "</string>
+    <string name="agree_button_text">একমত</string>
+    <!-- Help activity list item strings -->
+    <string name="term_condition_label">শর্তাবলী</string>
+    <string name="privacy_policy_label">গোপনীয়তা </string>
+    <string name="how_to_use_app_label">অ্যাপটি কীভাবে ব্যবহার করবেন?</string>
+    <string name="contact_us_label">যোগাযোগ করুন</string>
+    <string name="about_us_label">আমাদের সম্পর্কে</string>
+</resources>

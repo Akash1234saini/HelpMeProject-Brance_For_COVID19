@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enable_to_upload_data">কোনও নেটওয়ার্ক নেই (দয়া করে আপনার নেটওয়ার্ক সংযোগটি পরীক্ষা করুন)</string>
+    <string name="connect_net_for_more_result">"আপনি অফলাইনে অনুসন্ধান করছেন, আরও ফলাফল পেতে দয়া করে আপনার ইন্টারনেটকে সংযুক্ত করুন "</string>
+    <string name="no_result_found">"ഫലമൊന്നും കണ്ടെത്തിയില്ല "</string>
+    <string name="term_and_service">"পরিষেবার শর্তাদি এবং গোপনীয়তা "</string>
+    <string name="please_read_TnC_PP">"আমরা এই বিষয়ের প্রকৃতি এবং সংবেদনশীলতা বুঝতে পারি এবং আপনার ডেটা আপোস না হয় তা নিশ্চিত করার জন্য কঠোর ব্যবস্থা গ্রহণ করেছি। "</string>
+    <string name="phone_call">"ফোন কল "</string>
+    <string name="describe_phone_call">"আপনার অবশ্যই এই অনুমতিটি যে কোনও নম্বরে কল করার অনুমতি দিতে হবে। "</string>
+    <string name="internet">ইন্টারনেটের</string>
+    <string name="describe_internet">"নেট থেকে নেওয়া কিছু তথ্যের জন্য অনুমতি প্রয়োজন। "</string>
+    <string name="link_of_TnC_and_PP">"আপনি যদি নিরাপদ ভারতে অবদান রাখতে চান তবে নীচের বোতামটিতে ক্লিক করে আপনার শর্ত ও শর্ত এবং গোপনীয়তা নীতি সম্পর্কে আপনার স্বীকৃতি নির্দেশ করুন। "</string>
+    <string name="agree_button_text">একমত</string>
+    <string name="action_search">തിരയൽ</string>
+    <string name="settings_order_by_state_label">অবস্থা</string>
+    <string name="settings_sort_by_ascending_label">"അപ്‌ഡേറ്റ് പരിശോധിക്കുക "</string>
+    <string name="settings_government_sort_by_ascending_label">ঊর্ধ্বগামী</string>
+    <string name="error_list_view">"কোনও নেটওয়ার্ক নেই (দয়া করে আপনার নেটওয়ার্ক সংযোগটি পরীক্ষা করুন) "</string>
+    <string name="settings_sort_by_label">ক্রমানুসার</string>
+    <string name="settings_government_sort_by_label">ক্রমানুসার</string>
+    <string name="settings_menu_item">ഫിൽട്ടർ</string>
+    <string name="search_hint">"জনসাধারণের যে কোনও বিবরণ সন্ধান করুন "</string>
+    <string name="action_signout">"സൈൻ ഔട്ട് "</string>
+    <string name="settings_order_by_address_label">വിലാസം</string>
+    <string name="empty_list_view">"নম্বর যুক্ত প্রথম হন! "</string>
+    <string name="settings_order_by_name_label">പേര്</string>
+    <string name="public_header">പൊതു</string>
+    <string name="action_share">പങ്കിടുക</string>
+    <string name="share">പങ്കിടുക</string>
+    <string name="action_language">ভাষা</string>
+    <string name="action_delete_public_number">ഇല്ലാതാക്കുക</string>
+    <string name="action_add_public_number">ചേർക്കുക</string>
+    <string name="settings_order_by_city_label">শহর</string>
+    <string name="add_public_number_label">"നമ്പർ ചേർക്കുക "</string>
+    <string name="government_header">സർക്കാർ</string>
+    <string name="action_help">സഹായിക്കൂ</string>
+    <string name="settings_sort_by_descending_label">ആരോഹണം</string>
+    <string name="settings_government_sort_by_descending_label">ആരോഹണം</string>
+    <string name="title_activity_settings">ക്രമീകരണങ്ങൾ</string>
+    <string name="setting">ക്രമീകരണങ്ങൾ</string>
+    <string name="action_check_for_update">"അപ്‌ഡേറ്റ് പരിശോധിക്കുക "</string>
+    <string name="settings_order_by_label">"പ്രകാരം ഓർഡർ ചെയ്യുക "</string>
+    <!-- Help activity list item strings -->
+    <string name="term_condition_label">നിബന്ധനകളും വ്യവസ്ഥകളും</string>
+    <string name="privacy_policy_label">സ്വകാര്യതാനയം</string>
+    <string name="how_to_use_app_label">അപ്ലിക്കേഷൻ എങ്ങനെ ഉപയോഗിക്കാം?</string>
+    <string name="contact_us_label">ഞങ്ങളെ സമീപിക്കുക</string>
+    <string name="about_us_label">ഞങ്ങളെ സമീപിക്കുക</string>
+</resources>

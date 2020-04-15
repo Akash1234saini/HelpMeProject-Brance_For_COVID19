@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Title Array of all emergency numbers -->
+    <array name="numberTitleArray">
+        <item>Air ambulance</item>
+        <item>Police</item>
+        <item>Fire</item>
+        <item>Ambulance</item>
+        <item>Traffic Police</item>
+        <item>Anti Corruption Helpline</item>
+        <item>Emergency Relief Centre on National Highways</item>
+        <item>State level helpline for Health </item>
+        <item>Hospital On Wheels</item>
+        <item>Anti-poison</item>
+        <item>Central Relief Commissioner for Natural Calamities</item>
+        <item>Relief Commissioners of Central/State/Union territory</item>
+        <item>Air Accident</item>
+        <item>Train accident </item>
+        <item>Road Accident</item>
+        <item>Traffic Help Line</item>
+        <item>Control room of District Collector/Magistrate</item>
+        <item>Disaster management</item>
+        <item>Anti terror Helpline/Alert All India</item>
+        <item>Women in Distress</item>
+        <item>Earth-quake Help line service</item>
+        <item>Natural disaster control room</item>
+        <item>AIDS helpline</item>
+        <item>Child abuse Hotline</item>
+        <item>Central Accident and Trauma Services</item>
+        <item>Catastrophe and Trauma service</item>
+        <item>General emergency Department of Telecommunications (DoT)</item>
+        <item>All in one Emergency Number</item>
+        <item>LIC Of India</item>
+        <item>Public Grievance Cell Telecom Circle HQs</item>
+        <item>Indian Railway General Enquiry 1</item>
+        <item>Indian Railway General Enquiry 2</item>
+        <item>Indian Railway General Enquiry 3</item>
+        <item>For any theft or harassment, nuisance caused due to smoking or alcohol consumption on train</item>
+        <item>Indian Railway Security Helpline</item>
+        <item>Railway Helpline for Arrival/Departure and Reservation services</item>
+        <item>Railway Enquiry</item>
+        <item>Indian Airlines</item>
+        <item>Air India ( Confirmation / Cancellation Enquiry)(Called Party)</item>
+        <item>For any queries related to landline telephone, ISDN etc. Also accessible from CellOne, Excel and Tarang phones</item>
+        <item>Railway</item>
+        <item>Kisan Call Center</item>
+        <item>Military Police Help Line</item>
+        <item>Indian Oil Help Line</item>
+        <item>Insurance Regulatory and Development Authority (IRDA) 1</item>
+        <item>Insurance Regulatory and Development Authority (IRDA) 2</item>
+        <item>Water Board</item>
+        <item>Electricity Complaints</item>
+        <item>Trunk booking</item>
+        <item>Trunk assistance</item>
+        <item>STD complaints</item>
+        <item>National Directory Enquiry (NDQ) Service</item>
+        <item>International trunk booking</item>
+        <item>International trunk enquiry</item>
+        <item>International Trunk delay information</item>
+        <item>Telex complaints</item>
+        <item>Free Phone Enquiry</item>
+        <item>India Telephone Card Enquiry</item>
+        <item>Billing complaint center 1</item>
+        <item>Billing complaint center 2</item>
+        <item>Billing Complaint Center 3</item>
+        <item>Weather Enquiry </item>
+        <item>Maritime Search and Rescue control room of coastal guard</item>
+        <item>Drug de-addiction</item>
+        <item>National Consumer Helpline</item>
+        <item>MyGov Toll Free Number for MannKiBaat for ideas and suggestions</item>
+        <item>IRCTC Help Line</item>
+        <item>National Health Helpline</item>
+        <item>Anti Ragging-Emails at helpline@antiragging.in</item>
+        <item>Mann Ki Baat on the toll-free number</item>
+        <item>Domestic abuse and sexual violence-Women\'s Helpline</item>
+        <item>Indian Army Help Line</item>
+        <item>LPG emergency helpline number </item>
+        <item>Blood bank Information</item>
+        <item>Dial a doctor</item>
+        <item>Tourist Office (Govt.of India)</item>
+        <item>Water Supply Complain</item>
+        <item>Leased Circuits Fault Booking</item>
+        <item>Eye Donation</item>
+        <item>Eye bank information service</item>
+        <item>Aadhar Card-UIDAI (Unique idenditification authority of india),1800-180-1947</item>
+        <item>Election Commission of India</item>
+        <item>Change number announcement (Hindi)</item>
+        <item>Changed number announcement (English)</item>
+        <item>Changed number announcement (Regional language)</item>
+        <item>Changed number announcement (in case of shift)</item>
+        <item>Sancharnet Internet Help desk service</item>
+        <item>Leased Circuit Fault Booking (WTR)</item>
+        <item>Aaykar Sampark Kendra (ASK)</item>
+        <item>Directory enquiry service</item>
+        <item>Telephone Complaint Booking</item>
+    </array>
+
+    <!-- Number Array of all emergency numbers -->
+    <array name="numberArray">
+        <item>+91 9540161344</item>
+        <item>+ 100</item>
+        <item>+ 101</item>
+        <item>+ 102</item>
+        <item>+ 103</item>
+        <item>+ 1031</item>
+        <item>+ 1033</item>
+        <item>+ 104</item>
+        <item>+ 104</item>
+        <item>+ 1066</item>
+        <item>+ 1070</item>
+        <item>+ 1070</item>
+        <item>+ 1071</item>
+        <item>+ 1072</item>
+        <item>+ 1073</item>
+        <item>+ 1073</item>
+        <item>+ 1077</item>
+        <item>+ 108</item>
+        <item>+ 1090</item>
+        <item>+ 1091</item>
+        <item>+ 1092</item>
+        <item>+ 1096</item>
+        <item>+ 1097</item>
+        <item>+ 1098</item>
+        <item>+ 1099</item>
+        <item>+ 1099</item>
+        <item>+ 112</item>
+        <item>+ 112</item>
+        <item>+ 1251</item>
+        <item>+ 12727</item>
+        <item>+ 1320</item>
+        <item>+ 131</item>
+        <item>+ 1321</item>
+        <item>+ 1322</item>
+        <item>+ 1322</item>
+        <item>+ 133</item>
+        <item>+ 139</item>
+        <item>+ 1407</item>
+        <item>+ 1414</item>
+        <item>+ 1500</item>
+        <item>+ 1512</item>
+        <item>+ 1551</item>
+        <item>+ 155200</item>
+        <item>+ 155233</item>
+        <item>+ 155255</item>
+        <item>+ 18004254732</item>
+        <item>+ 155313</item>
+        <item>+ 155333</item>
+        <item>+ 1580</item>
+        <item>+ 1581</item>
+        <item>+ 1582</item>
+        <item>+ 1583</item>
+        <item>+ 1586</item>
+        <item>+ 1587</item>
+        <item>+ 1588</item>
+        <item>+ 1589</item>
+        <item>+ 1600</item>
+        <item>+ 1602</item>
+        <item>+ 166</item>
+        <item>+ 166069</item>
+        <item>+ 167173</item>
+        <item>+ 1717</item>
+        <item>+ 1718</item>
+        <item>+ 1800110031</item>
+        <item>+ 1800114000</item>
+        <item>+ 1800117800</item>
+        <item>+ 1800111139</item>
+        <item>+ 18001801104</item>
+        <item>+ 18001805522</item>
+        <item>+ 18003000780</item>
+        <item>+ 181</item>
+        <item>+ 1904</item>
+        <item>+ 1906</item>
+        <item>+ 1910</item>
+        <item>+ 1911</item>
+        <item>+ 1913</item>
+        <item>+ 1916</item>
+        <item>+ 1918</item>
+        <item>+ 1919</item>
+        <item>+ 1919</item>
+        <item>+ 1947</item>
+        <item>+ 1950</item>
+        <item>+ 1951</item>
+        <item>+ 1952</item>
+        <item>+ 1953</item>
+        <item>+ 1954</item>
+        <item>+ 1957</item>
+        <item>+ 1958</item>
+        <item>+ 1961</item>
+        <item>+ 197</item>
+        <item>+ 198</item>
+    </array>
+
+</resources>

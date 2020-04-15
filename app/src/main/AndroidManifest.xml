@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.proapps.akashsaini.helpme">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="false"
+        android:icon="@mipmap/ic_launcher_png"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_png"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="HardcodedDebugMode">
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LiveCoronaPatientUpdateActivity"
+            android:label="Global Corona Live Report" />
+        <activity android:name=".VerificationCodeActivity" />
+        <activity android:name=".LicenseAgreementActivity">
+        </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="Help"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AboutAppActivityTheme" />
+        <activity
+            android:name=".SearchActivity"
+            android:theme="@style/SearchTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/SettingsTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.proapps.akashsaini.helpme.MainActivity" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gsm.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544-3347611713" />
+
+        <activity
+            android:name=".AddPublicHelplineNumberActivity"
+            android:label="@string/add_public_number_label"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AddPublicNumberTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

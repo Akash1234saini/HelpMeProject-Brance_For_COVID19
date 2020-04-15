@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:title="@string/action_search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_setting"
+        android:title="@string/settings_menu_item"
+        android:icon="@drawable/ic_filter"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_language"
+        android:title="@string/action_language"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_translate_language"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_signout"
+        android:orderInCategory="100"
+        android:title="@string/action_signout"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="3"
+        android:icon="@drawable/ic_help"
+        android:title="@string/action_help"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="4"
+        android:icon="@drawable/ic_share"
+        android:title="@string/action_share"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_check_for_update"
+        android:orderInCategory="5"
+        android:title="@string/action_check_for_update"
+        app:showAsAction="never" />
+
+</menu>
