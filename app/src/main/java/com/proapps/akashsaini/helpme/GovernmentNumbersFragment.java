@@ -139,7 +139,7 @@ public class GovernmentNumbersFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                final SharedPreferences sharedPreferences = Objects.requireNonNull(getContext()).getSharedPreferences("AlertDialogCheckBox", Context.MODE_PRIVATE);
+                final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
                 boolean isChecked = sharedPreferences.getBoolean("AlertDialogCheckBox", false);
 
                 String currentNumber = number.get(i).getmNumber();

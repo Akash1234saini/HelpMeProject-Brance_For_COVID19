@@ -15,6 +15,7 @@ import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -45,7 +46,7 @@ public class LicenseAgreementActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         loadLocale();
         setContentView(R.layout.activity_agreement_license);
 
@@ -53,10 +54,9 @@ public class LicenseAgreementActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE);
         boolean licenseAgreed = sharedPreferences.getBoolean("licenseAccepted", false);
         if (licenseAgreed) {
-            startActivity(new Intent(this, SplashScreenActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             finish();
         }
 
@@ -170,11 +170,9 @@ public class LicenseAgreementActivity extends AppCompatActivity {
                             break;
                     }
                     dialog.dismiss();
+                    recreate();
                 }
-            });
-
-            AlertDialog dialog = customDialogBuilder.create();
-            dialog.show();
+            }).show();
         }
 
         return super.onOptionsItemSelected(item);

@@ -6,10 +6,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,32 +35,48 @@ public class HelpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_help);
 
         mListView = findViewById(R.id.listView);
+        mListView.setDividerHeight(0);
 
         mHelpArrayList = new ArrayList<>();
         mHelpArrayList.add(new Help(R.drawable.ic_term_and_services, getString(R.string.term_condition_label)));
         mHelpArrayList.add(new Help(R.drawable.ic_privacy_policy, getString(R.string.privacy_policy_label)));
         mHelpArrayList.add(new Help(R.drawable.ic_qsn, getString(R.string.how_to_use_app_label)));
         mHelpArrayList.add(new Help(R.drawable.ic_contact, getString(R.string.contact_us_label)));
-        mHelpArrayList.add(new Help(R.drawable.ic_about, getString(R.string.about_us_label)));
+        mHelpArrayList.add(new Help(R.drawable.ic_about, getString(R.string.about_app_label)));
+        mHelpArrayList.add(new Help(R.drawable.ic_sign_out, getString(R.string.sign_out_label)));
 
         mHelpAdapter = new HelpAdapter(this, mHelpArrayList);
         mListView.setAdapter(mHelpAdapter);
 
-        final ArrayList<String> urlKeys = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.url_keys)));
+        final ArrayList<String> listOption = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.url_keys)));
 
-        sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE);
-        final String selectedLanguage = sharedPreferences.getString("selected_language", "en");
-        Log.i(TAG, selectedLanguage);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String selectedLanguage = sharedPreferences.getString("selected_language", "en");
+        if (selectedLanguage.equals("")) selectedLanguage = "en";
+        Log.i(TAG, "lng: " + selectedLanguage);
 
+        final String finalSelectedLanguage = selectedLanguage;
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 // calling intent to open web browser passing through values
-                if (selectedLanguage.equals("en") || selectedLanguage.equals("pa"))
-                    goToEnglishWebAddress(urlKeys.get(position));
-                else
-                    goToWebAddress(urlKeys.get(position), selectedLanguage);
+                if (listOption.size() - 1 >= position) {
+                    if (finalSelectedLanguage.equals("en") || finalSelectedLanguage.equals("pa"))
+                        goToEnglishWebAddress(listOption.get(position));
+                    else
+                        goToWebAddress(listOption.get(position), finalSelectedLanguage);
+                } else {
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                    if (user != null) {
+                        FirebaseAuth.getInstance().signOut();
+                        Toast.makeText(HelpActivity.this, R.string.action_signout, Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(HelpActivity.this, MainActivity.class));
+                    } else {
+                        Toast.makeText(HelpActivity.this, R.string.not_sign_in_yet, Toast.LENGTH_SHORT).show();
+                    }
+                }
             }
         });
     }

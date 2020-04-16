@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -281,7 +282,7 @@ public class AddPublicHelplineNumberActivity extends AppCompatActivity {
         String mUserUID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
         String address2 = mAddressLine2EditText.getText().toString();
 
-        SharedPreferences sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean licenseAgreed = sharedPreferences.getBoolean("licenseAccepted", false);
 
         AddPublicNumber publicNumber = new AddPublicNumber(mUserUID, mName, mMobile1, mobile2, mState, pin, mCity, mAddress, address2, licenseAgreed);

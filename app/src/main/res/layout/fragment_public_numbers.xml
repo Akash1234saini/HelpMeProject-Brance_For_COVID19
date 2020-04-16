@@ -33,7 +33,7 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
-        android:src="@drawable/ic_person_24dp"
+        android:src="@drawable/ic_person"
         app:backgroundTint="#D25B5B" />
 
 </FrameLayout>

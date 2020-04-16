@@ -59,7 +59,7 @@
 
         <activity
             android:name=".AddPublicHelplineNumberActivity"
-            android:label="@string/add_public_number_label"
+            android:label="@string/sign_in_public_number_label"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AddPublicNumberTheme" />
         <activity

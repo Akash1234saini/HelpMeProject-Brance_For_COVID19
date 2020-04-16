@@ -136,7 +136,7 @@ public class SearchActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 getKeyboardHide(mNumberListView);
 
-                sharedPreferences = SearchActivity.this.getSharedPreferences("AlertDialogPublicNumberCheckBox", MODE_PRIVATE);
+                sharedPreferences = PreferenceManager.getDefaultSharedPreferences(SearchActivity.this);
                 boolean isChecked = sharedPreferences.getBoolean("AlertDialogPublicNumberCheckBox", false);
 
                 if (!isChecked)

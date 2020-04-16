@@ -20,6 +20,7 @@ import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -32,6 +33,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 
@@ -58,10 +60,12 @@ public class MainActivity extends AppCompatActivity {
     private String old_app_version;
     private String new_app_version;
 
+    private int timesPressedBackButton = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         loadLocale();
         setContentView(R.layout.activity_main);
 
@@ -75,11 +79,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                Intent intent = new Intent(MainActivity.this, LiveCoronaPatientUpdateActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                finish();
-                return true;
+                if (item.getItemId() == R.id.action_live) {
+                    Intent intent = new Intent(MainActivity.this, LiveCoronaPatientUpdateActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                    return true;
+                } else {
+                    return false;
+                }
             }
         });
 
@@ -135,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayUpdateDialog() {
-        final SharedPreferences sharedPreferences = Objects.requireNonNull(this).getSharedPreferences("UpdateCanceled", MODE_PRIVATE);
+        final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         boolean availableUpdate = mFirebaseRemoteConfig.getBoolean(UPDATE_AVAILABLE_CONFIG_KEY);
         String updateVersion = mFirebaseRemoteConfig.getString(UPDATE_VERSION_CONFIG_KEY);
@@ -220,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        MenuItem m = menu.findItem(R.id.action_signin).setVisible(false);
         return true;
     }
 
@@ -230,9 +239,9 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
 
         switch (item.getItemId()) {
-            case R.id.action_signout:
-                FirebaseAuth.getInstance().signOut();
-                Toast.makeText(this, "Signed out", Toast.LENGTH_SHORT).show();
+            case R.id.action_signin:
+                Intent signinIntent = new Intent(MainActivity.this, AddPublicHelplineNumberActivity.class);
+                startActivity(signinIntent);
                 break;
             case R.id.action_setting:
                 Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
@@ -332,5 +341,15 @@ public class MainActivity extends AppCompatActivity {
         String selectedLanguage = sharedPreferences.getString("selected_language", "");
 //        Log.i(TAG, selectedLanguage);
         setLocale(selectedLanguage);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (timesPressedBackButton >= 2) {
+            finish();
+        } else
+            Toast.makeText(this, R.string.press_one_more_time, Toast.LENGTH_SHORT).show();
+        timesPressedBackButton++;
     }
 }

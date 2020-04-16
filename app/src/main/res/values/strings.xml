@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name" translatable="false">Corona HelpLines</string>
 
-    <string name="action_signout">Signout</string>
+    <string name="action_signin">Sign In</string>
+    <string name="action_signout">Sign Out</string>
     <string name="action_help">Help</string>
     <string name="action_language">Language</string>
     <string name="action_share">Share</string>
@@ -23,7 +24,7 @@
     <string name="state" translatable="false">Utter Pradesh</string>
     <string name="number" translatable="false">+918298462786</string>
 
-    <string name="add_public_number_label">Add Number</string>
+    <string name="sign_in_public_number_label">Sign in</string>
 
     <string name="settings_menu_item">Filter</string>
     <string name="title_activity_settings">Settings</string>
@@ -142,7 +143,8 @@
     <string name="privacy_policy_label">Privacy Policy</string>
     <string name="how_to_use_app_label">How to use app?</string>
     <string name="contact_us_label">Contact Us</string>
-    <string name="about_us_label">About Us</string>
+    <string name="about_app_label">About App</string>
+    <string name="sign_out_label">Sign Out</string>
 
     <!-- Verification code activity strings -->
     <string name="code_send_label">We send you 6 digit code</string>
@@ -185,6 +187,7 @@
     <string name="company_name">by CodeX Editors</string>
     <string name="app_splash_screen_name">COVID19 HelpLines</string>
     <string name="corona_live_update">Corona Live Update</string>
+    <string name="press_one_more_time">Press one more time to exit</string>
 
     <!-- Sign in errors strings -->
 

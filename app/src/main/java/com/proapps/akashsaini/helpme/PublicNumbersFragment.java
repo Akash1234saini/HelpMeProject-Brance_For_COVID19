@@ -121,7 +121,7 @@ public class PublicNumbersFragment extends Fragment {
         mNumberListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int position, long l) {
-                final SharedPreferences sharedPreferences = Objects.requireNonNull(getContext()).getSharedPreferences("AlertDialogPublicNumberCheckBox", MODE_PRIVATE);
+                final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
                 boolean isChecked = sharedPreferences.getBoolean("AlertDialogPublicNumberCheckBox", false);
 
                 if (!isChecked) {

@@ -100,11 +100,15 @@ public class LiveCoronaPatientUpdateActivity extends AppCompatActivity
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                Intent intent = new Intent(LiveCoronaPatientUpdateActivity.this, MainActivity.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                finish();
-                return true;
+                if (item.getItemId() == R.id.action_home) {
+                    Intent intent = new Intent(LiveCoronaPatientUpdateActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    finish();
+                    return true;
+                } else {
+                    return false;
+                }
             }
         });
 

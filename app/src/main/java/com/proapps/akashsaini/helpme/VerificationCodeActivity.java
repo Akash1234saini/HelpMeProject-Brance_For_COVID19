@@ -193,7 +193,7 @@ public class VerificationCodeActivity extends AppCompatActivity {
         String mAddress = getIntent().getStringExtra("address1");
         String mAddress2 = getIntent().getStringExtra("address2");
 
-        SharedPreferences sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean licenseAgreed = sharedPreferences.getBoolean("licenseAccepted", false);
 
         AddPublicNumber publicNumber = new AddPublicNumber(uid, mName, mMobile1, mMobile2, mState, mPin, mCity, mAddress, mAddress2, licenseAgreed);
