@@ -96,7 +96,7 @@ public class PublicNumbersFragment extends Fragment {
         mNumberListView = rootView.findViewById(R.id.listView);
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mUserReference = mFirebaseDatabase.getReference();
+        mUserReference = mFirebaseDatabase.getReference("users");
         mErrorTextView = rootView.findViewById(R.id.errorTextView);
         mProgressBar = rootView.findViewById(R.id.progressBar);
 
@@ -347,7 +347,9 @@ public class PublicNumbersFragment extends Fragment {
         // If there is not network connection, fetch data
         if (networkInfo == null || !networkInfo.isConnectedOrConnecting()) {
             mErrorTextView.setText(R.string.error_list_view);
-        }
+            mProgressBar.setVisibility(View.GONE);
+        } else
+            mErrorTextView.setText(R.string.empty_list_view);
     }
 
     @Override
@@ -368,15 +370,7 @@ public class PublicNumbersFragment extends Fragment {
                     for (DataSnapshot snaps : dataSnapshot.getChildren()) {
                         publicNumbers.add(snaps.getValue(AddPublicNumber.class));
                     }
-
-                    fragmentNumberAdapter.notifyDataSetChanged();
-                    mProgressBar.setVisibility(View.GONE);
-
-                    if (publicNumbers.size() != 0)
-                        mErrorTextView.setText("");
-                    else {
-                        mErrorTextView.setText(R.string.empty_list_view);
-                    }
+                    Log.i(TAG, "under");
 
                     SharedPreferences sharedPres = PreferenceManager.getDefaultSharedPreferences(getContext());
                     String sortBy = sharedPres.getString(
@@ -420,6 +414,11 @@ public class PublicNumbersFragment extends Fragment {
                     else if (sortBy.equals(getString(R.string.settings_sort_by_descending_value))
                             && orderBy.equals(getString(R.string.settings_order_by_address_value)))
                         Collections.sort(publicNumbers, AddPublicNumber.sortByAddressDescending);
+
+                    mErrorTextView.setText(R.string.empty_list_view);
+                    mProgressBar.setVisibility(View.GONE);
+
+                    fragmentNumberAdapter.notifyDataSetChanged();
                 }
 
                 @Override

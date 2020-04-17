@@ -196,7 +196,7 @@ public class VerificationCodeActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean licenseAgreed = sharedPreferences.getBoolean("licenseAccepted", false);
 
-        AddPublicNumber publicNumber = new AddPublicNumber(uid, mName, mMobile1, mMobile2, mState, mPin, mCity, mAddress, mAddress2, licenseAgreed);
+        AddPublicNumber publicNumber = new AddPublicNumber(uid, mName, mMobile1, mMobile2, mState, mPin, mCity, mAddress, mAddress2, String.valueOf(licenseAgreed));
         mUserReference.child(uid).setValue(publicNumber)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override

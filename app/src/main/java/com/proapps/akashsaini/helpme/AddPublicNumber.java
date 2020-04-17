@@ -13,13 +13,12 @@ public class AddPublicNumber {
     private String mCity;
     private String mAddr1;
     private String mAddr2;
-    private boolean mAgreement;
+    private String mAgreement;
 
-    public AddPublicNumber(){
-
+    public AddPublicNumber() {
     }
 
-    public AddPublicNumber(String mUserUID, String mName, String mMob1, String mMob2, String mState, String mPin, String mCity, String mAddr1, String mAddr2, boolean mAgreement) {
+    public AddPublicNumber(String mUserUID, String mName, String mMob1, String mMob2, String mState, String mPin, String mCity, String mAddr1, String mAddr2, String mAgreement) {
         this.mUserUID = mUserUID;
         this.mName = mName;
         this.mMob1 = mMob1;
@@ -66,6 +65,10 @@ public class AddPublicNumber {
 
     public String getmAddr2() {
         return mAddr2;
+    }
+
+    public String ismAgreement() {
+        return mAgreement;
     }
 
     /*Comparator for sorting in ascending order the list by Public Number Name*/

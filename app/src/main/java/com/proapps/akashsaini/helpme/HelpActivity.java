@@ -43,7 +43,6 @@ public class HelpActivity extends AppCompatActivity {
         mHelpArrayList.add(new Help(R.drawable.ic_qsn, getString(R.string.how_to_use_app_label)));
         mHelpArrayList.add(new Help(R.drawable.ic_contact, getString(R.string.contact_us_label)));
         mHelpArrayList.add(new Help(R.drawable.ic_about, getString(R.string.about_app_label)));
-        mHelpArrayList.add(new Help(R.drawable.ic_sign_out, getString(R.string.sign_out_label)));
 
         mHelpAdapter = new HelpAdapter(this, mHelpArrayList);
         mListView.setAdapter(mHelpAdapter);
@@ -52,7 +51,7 @@ public class HelpActivity extends AppCompatActivity {
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String selectedLanguage = sharedPreferences.getString("selected_language", "en");
-        if (selectedLanguage.equals("")) selectedLanguage = "en";
+        if (selectedLanguage != null && selectedLanguage.equals("")) selectedLanguage = "en";
         Log.i(TAG, "lng: " + selectedLanguage);
 
         final String finalSelectedLanguage = selectedLanguage;
@@ -61,22 +60,10 @@ public class HelpActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 // calling intent to open web browser passing through values
-                if (listOption.size() - 1 >= position) {
                     if (finalSelectedLanguage.equals("en") || finalSelectedLanguage.equals("pa"))
                         goToEnglishWebAddress(listOption.get(position));
                     else
                         goToWebAddress(listOption.get(position), finalSelectedLanguage);
-                } else {
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-                    if (user != null) {
-                        FirebaseAuth.getInstance().signOut();
-                        Toast.makeText(HelpActivity.this, R.string.action_signout, Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(HelpActivity.this, MainActivity.class));
-                    } else {
-                        Toast.makeText(HelpActivity.this, R.string.not_sign_in_yet, Toast.LENGTH_SHORT).show();
-                    }
-                }
             }
         });
     }

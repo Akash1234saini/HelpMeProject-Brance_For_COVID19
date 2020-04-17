@@ -60,11 +60,18 @@ public class LicenseAgreementActivity extends AppCompatActivity {
             finish();
         }
 
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String selectedLanguage = sharedPreferences.getString("selected_language", "en");
+        if (selectedLanguage != null && selectedLanguage.equals("")) selectedLanguage = "en";
+        if (selectedLanguage != null && selectedLanguage.equals("pa")) selectedLanguage = "en";
+        final String finalSelectedLanguage = selectedLanguage;
+
         SpannableString spannableString = new SpannableString(getString(R.string.link_of_TnC_and_PP));
         ClickableSpan termAndCondition = new ClickableSpan() {
             @Override
             public void onClick(@NonNull View widget) {
-                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishalsaini16297.wixsite.com/privacypolicycovid19/blank-page-1"));
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishalsaini16297.wixsite.com/codexeditorsofficial/termandconditions" + "?lang=" +
+                        finalSelectedLanguage));
                 startActivity(webIntent);
             }
         };
@@ -72,7 +79,8 @@ public class LicenseAgreementActivity extends AppCompatActivity {
         ClickableSpan privacyAndPolicy = new ClickableSpan() {
             @Override
             public void onClick(@NonNull View widget) {
-                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishalsaini16297.wixsite.com/privacypolicycovid19/blank-page"));
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishalsaini16297.wixsite.com/codexeditorsofficial/privacypolicy" + "?lang=" +
+                        finalSelectedLanguage));
                 startActivity(webIntent);
             }
         };

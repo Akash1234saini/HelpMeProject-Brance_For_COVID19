@@ -228,7 +228,15 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        MenuItem m = menu.findItem(R.id.action_signin).setVisible(false);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            menu.findItem(R.id.action_signin).setVisible(false);
+            menu.findItem(R.id.action_signout).setVisible(true);
+        } else {
+            menu.findItem(R.id.action_signin).setVisible(true);
+            menu.findItem(R.id.action_signout).setVisible(false);
+        }
         return true;
     }
 
@@ -243,11 +251,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent signinIntent = new Intent(MainActivity.this, AddPublicHelplineNumberActivity.class);
                 startActivity(signinIntent);
                 break;
-            case R.id.action_setting:
+            case R.id.action_signout:
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(this, R.string.sign_out_label, Toast.LENGTH_SHORT).show();
+                recreate();
+                break;
+            case R.id.action_filter:
                 Intent settingsIntent = new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(settingsIntent);
                 break;
-            case R.id.action_help:
+            case R.id.action_settings_help:
                 startActivity(new Intent(this, HelpActivity.class));
                 break;
             case R.id.action_share:

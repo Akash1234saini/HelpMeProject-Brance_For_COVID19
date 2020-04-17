@@ -1,5 +1,6 @@
 package com.proapps.akashsaini.helpme;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,9 +9,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
@@ -19,6 +25,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -75,6 +82,7 @@ public class AddPublicHelplineNumberActivity extends AppCompatActivity {
 
     private ProgressBar mProgressBar;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,13 +97,52 @@ public class AddPublicHelplineNumberActivity extends AppCompatActivity {
         mAddressLine1EditText = (EditText) findViewById(R.id.addressLine1EditText);
         mAddressLine2EditText = (EditText) findViewById(R.id.addressLine2EditText);
         mProgressBar = findViewById(R.id.progressBar);
-        
+        TextView signInTerm = findViewById(R.id.terms);
+        TextView signInPrivacy = findViewById(R.id.privacy);
+
+        // assigning every text string into note text view
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String selectedLanguage = sharedPreferences.getString("selected_language", "en");
+        if (selectedLanguage != null && selectedLanguage.equals("")) selectedLanguage = "en";
+        if (selectedLanguage != null && selectedLanguage.equals("pa")) selectedLanguage = "en";
+        final String finalSelectedLanguage = selectedLanguage;
+
+        // Making clickable to that links
+        SpannableString spannableString1 = new SpannableString(getString(R.string.sign_in_link_t_and_c));
+        SpannableString spannableString2 = new SpannableString(getString(R.string.sign_in_link_privacy_policy));
+        ClickableSpan termAndCondition = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishalsaini16297.wixsite.com/codexeditorsofficial/termandconditions" + "?lang=" +
+                        finalSelectedLanguage));
+                startActivity(webIntent);
+            }
+        };
+
+        ClickableSpan privacyAndPolicy = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vishalsaini16297.wixsite.com/codexeditorsofficial/privacypolicy" + "?lang=" +
+                        finalSelectedLanguage));
+                startActivity(webIntent);
+            }
+        };
+
+        spannableString1.setSpan(termAndCondition, 0, signInTerm.getText().toString().length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        spannableString2.setSpan(privacyAndPolicy, 0, signInPrivacy.getText().toString().length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        signInTerm.setText(spannableString1);
+        signInPrivacy.setText(spannableString2);
+        signInTerm.setMovementMethod(LinkMovementMethod.getInstance());
+        signInPrivacy.setMovementMethod(LinkMovementMethod.getInstance());
+
         mFirebaseAuth = FirebaseAuth.getInstance();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mUserReference = mFirebaseDatabase.getReference("users");
         mUserDetailReference = mFirebaseDatabase.getReference();
         mUser = mFirebaseAuth.getCurrentUser();
-        
+
         mNoNetworkToast = Toast.makeText(this, R.string.enable_to_upload_data, Toast.LENGTH_LONG);
 
         // Get a reference to the connectivity manager to check the state of network connectivity
@@ -285,7 +332,9 @@ public class AddPublicHelplineNumberActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean licenseAgreed = sharedPreferences.getBoolean("licenseAccepted", false);
 
-        AddPublicNumber publicNumber = new AddPublicNumber(mUserUID, mName, mMobile1, mobile2, mState, pin, mCity, mAddress, address2, licenseAgreed);
+        Log.i(TAG, "licence Agreemment: " + licenseAgreed);
+
+        AddPublicNumber publicNumber = new AddPublicNumber(mUserUID, mName, mMobile1, mobile2, mState, pin, mCity, mAddress, address2, String.valueOf(licenseAgreed));
         mUserReference.child(mUser.getUid()).setValue(publicNumber)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -359,7 +408,12 @@ public class AddPublicHelplineNumberActivity extends AppCompatActivity {
             mChildEventListener = new ChildEventListener() {
                 @Override
                 public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                    AddPublicNumber publicNumber = dataSnapshot.child(mUser.getUid()).getValue(AddPublicNumber.class);
+                    AddPublicNumber publicNumber = null;
+                    try {
+                        publicNumber = dataSnapshot.child(mUser.getUid()).getValue(AddPublicNumber.class);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     if (publicNumber != null) {
                         assignDataInEditors(publicNumber.getmName(), publicNumber.getmMob1(), publicNumber.getmMob2(), publicNumber.getmState(), publicNumber.getmPin(),
                                 publicNumber.getmCity(), publicNumber.getmAddr1(), publicNumber.getmAddr2());

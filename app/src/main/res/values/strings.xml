@@ -24,10 +24,8 @@
     <string name="state" translatable="false">Utter Pradesh</string>
     <string name="number" translatable="false">+918298462786</string>
 
-    <string name="sign_in_public_number_label">Sign in</string>
-
     <string name="settings_menu_item">Filter</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_settings">Filter</string>
 
     <!-- Permission disgraced toast message -->
     <!--    <string name="agreement_text">Allow to call</string>-->
@@ -118,7 +116,7 @@
 
     <!-- error or empty text view string -->
     <string name="error_list_view">No Network (Please check your network connection)</string>
-    <string name="empty_list_view">Be the first to add number!</string>
+    <string name="empty_list_view">Be first to add number by clicking on (+) button</string>
 
     <!-- toast msg to indicates that user can't upload data to database text view string -->
     <string name="enable_to_upload_data">No Network!\nplease check your internet and back again</string>
@@ -135,7 +133,7 @@
     <string name="describe_phone_call">You must allow this permission to make call to any number.</string>
     <string name="internet">Internet</string>
     <string name="describe_internet">Permission is required for some information taken from the net.</string>
-    <string name="link_of_TnC_and_PP">If you would like to contribute to s safe India please indicate your acceptance of the Term and Condition and the Privacy Policy by clicking on the button below.</string>
+    <string name="link_of_TnC_and_PP">If you would like to contribute to safe India please indicate your acceptance of the Term and Condition and the Privacy Policy by clicking on the button below.</string>
     <string name="agree_button_text">Agree</string>
 
     <!-- Help activity list item strings -->
@@ -160,7 +158,6 @@
     <string name="are_you_sure">Are you sure you want to call on this number?</string>
     <string name="don_t_show_text">Don\'t show again</string>
     <string name="update_dialog_title">Update Available</string>
-    <string name="update_dialog_message">You want to update latest version of an appliation?</string>
 
     <!-- Bottom navigation view tabs strings -->
     <string name="action_home">Home</string>
@@ -168,11 +165,11 @@
 
     <!-- Live total COVID19 report strings -->
     <string name="total_cases_label">Total Cases</string>
-    <string name="total_cases_placeholder">0</string>
+    <string name="total_cases_placeholder" translatable="false">0</string>
     <string name="total_deaths_label">Total Deaths</string>
-    <string name="total_deaths_placeholder">0</string>
+    <string name="total_deaths_placeholder" translatable="false">0</string>
     <string name="total_recovered_label">Total Recovered</string>
-    <string name="total_recovered_placeholder">0</string>
+    <string name="total_recovered_placeholder" translatable="false">0</string>
     <string name="overview_label">Overview</string>
     <string name="name_edit_text_hint">*Name</string>
     <string name="mobile_number_1_edit_text_hint">*Mobile Number 1</string>
@@ -183,12 +180,17 @@
     <string name="city_edit_text_hint">*City</string>
     <string name="address_line_1_edit_text_hint">*Address Line 1</string>
     <string name="address_line_2_edit_text_hint">Address Line 2</string>
-    <string name="introducing">Introducing</string>
-    <string name="company_name">by CodeX Editors</string>
-    <string name="app_splash_screen_name">COVID19 HelpLines</string>
-    <string name="corona_live_update">Corona Live Update</string>
+    <string name="introducing" translatable="false">Introducing</string>
+    <string name="company_name" translatable="false">by CodeX Editors</string>
+    <string name="app_splash_screen_name" translatable="false">COVID19 HelpLines</string>
+    <string name="corona_live_update" translatable="false">Corona Live Update</string>
     <string name="press_one_more_time">Press one more time to exit</string>
 
+    <string name="sign_in_note">Note: Before register your number on our application to help people, we recomend you to read Term &amp; Condition
+    and Privacy Policy to make sure you will not in trouble.</string>
+    <string name="sign_in_link_t_and_c">Term and Condition</string>
+    <string name="sign_in_link_privacy_policy">Privacy Policy</string>
+    <string name="update_dialog_message">You want to update latest version of an appliation?</string>
     <!-- Sign in errors strings -->
 
 </resources>

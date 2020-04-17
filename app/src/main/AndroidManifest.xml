@@ -24,7 +24,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.proapps.akashsaini.helpme.LiveCoronaPatientUpdateActivity" />
         </activity>
-        <activity android:name=".SplashScreenActivity">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,9 +35,14 @@
         </activity>
         <activity
             android:name=".LiveCoronaPatientUpdateActivity"
-            android:label="Global Corona Live Report" />
-        <activity android:name=".VerificationCodeActivity" />
-        <activity android:name=".LicenseAgreementActivity" />
+            android:label="Global Corona Live Report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VerificationCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LicenseAgreementActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".HelpActivity"
             android:label="Help"
@@ -61,12 +68,13 @@
             android:name=".AddPublicHelplineNumberActivity"
             android:label="@string/sign_in_public_number_label"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AddPublicNumberTheme" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:screenOrientation="fullSensor"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
     </application>
 
